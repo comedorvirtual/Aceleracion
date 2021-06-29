@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Aceleracion</string>
+    <string name="aceleracion_linea">Aceleracion Linea</string>
+    <string name="eje_x">Eje X</string>
+    <string name="eje_y">Eje Y</string>
+    <string name="eje_z">Eje Z</string>
 </resources>

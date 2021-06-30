@@ -16,9 +16,12 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     private TextView ejex;
     private TextView ejey;
     private TextView ejez;
+    private TextView aceleracion;
     private String a, b, c;
     private float[] gravity = new float[3];
     final float ALPHA =  0.8f;
+    private double accelerationCurrentValue;
+    private double accelerationPreviousValue;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         ejex = findViewById(R.id.tv_eje_x);
         ejey = findViewById(R.id.tv_eje_y);
         ejez = findViewById(R.id.tv_eje_z);
+        aceleracion = findViewById(R.id.tv_acc);
         mSensorManager = (SensorManager)this.getSystemService(Context.SENSOR_SERVICE);
         mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION);
     }
@@ -56,10 +60,16 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         values = highPass(values[0], values[1], values[2]);
         a = values[0]+"";
         b = values[1]+"";
-        c = values[1]+"";
+        c = values[2]+"";
         ejex.setText(a);
         ejey.setText(b);
         ejez.setText(c);
+
+        accelerationCurrentValue = Math.sqrt((values[0] * values[0] + values[1] * values[1] + values[2] * values[2]));
+        accelerationPreviousValue = accelerationCurrentValue;
+        double changeInAcceleration = Math.abs(accelerationCurrentValue - accelerationPreviousValue);
+        aceleracion.setText(": " + accelerationCurrentValue);
+
 
         //aca ejecutan lo de la suma de cuadrados para captar el desplazamiento
     }

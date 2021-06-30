@@ -4,4 +4,5 @@
     <string name="eje_x">Eje X</string>
     <string name="eje_y">Eje Y</string>
     <string name="eje_z">Eje Z</string>
+    <string name="aceleracionTotal">Aceleración Total</string>
 </resources>

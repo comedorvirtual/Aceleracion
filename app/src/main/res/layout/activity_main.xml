@@ -8,6 +8,26 @@
 
 
     <TextView
+        android:id="@+id/tv_acc"
+        android:layout_width="102dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.261"
+        app:layout_constraintStart_toEndOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/aceleracionTotal"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,8 +47,8 @@
 
     <TextView
         android:id="@+id/tv_eje_z"
-        android:layout_width="40dp"
-        android:layout_height="wrap_content"
+        android:layout_width="83dp"
+        android:layout_height="23dp"
         android:layout_marginBottom="48dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,8 +57,8 @@
 
     <TextView
         android:id="@+id/tv_eje_y"
-        android:layout_width="40dp"
-        android:layout_height="wrap_content"
+        android:layout_width="84dp"
+        android:layout_height="22dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="40dp"
         app:layout_constraintBottom_toTopOf="@+id/tv_eje_z"
@@ -81,8 +101,8 @@
 
     <TextView
         android:id="@+id/tv_eje_x"
-        android:layout_width="40dp"
-        android:layout_height="wrap_content"
+        android:layout_width="78dp"
+        android:layout_height="21dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
